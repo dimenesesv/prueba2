@@ -1,0 +1,7 @@
+{
+  "name": "diego_meneses_p2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
