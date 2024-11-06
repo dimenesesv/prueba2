@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class AuthService {
   private readonly URL : string = 'https://dummyjson.com/auth/login';
   private user: IUserData | null = null;
-  public token : string|null = null
+  public token!: string;
 
   constructor(
     private http: HttpClient,

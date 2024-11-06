@@ -25,6 +25,7 @@ export class LoginPage implements OnInit{
     }
 
   ngOnInit(): void {
+    this.auth.token = '';
     this.form = this.formBuilder.group({
       username: ['',Validators.required],
       password: ['',Validators.required]

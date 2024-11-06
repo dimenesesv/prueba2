@@ -1,13 +1,26 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <ion-item>
-    <ion-label position="floating">Usuario</ion-label>
-    <ion-input formControlName="username" required></ion-input>
-  </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Contraseña</ion-label>
-    <ion-input formControlName="password" type="password" required></ion-input>
-  </ion-item>
+<ion-content>
 
-  <ion-button expand="full" type="submit">Iniciar sesión</ion-button>
-</form>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title style="text-align: center; margin-top: 20px;">Bienvenido</ion-card-title>
+    <ion-img style="height: 200px; width: 200p;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8CufeTQyeTTp5xLPufl6FOTjQmBIHV-F1VA7_lNeInYUFMfkDPZP3sAohjhYwdGvNFms&usqp=CAU"></ion-img>
+  </ion-card-header>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input formControlName="username" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input formControlName="password" type="password" required ></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit">Iniciar sesión</ion-button>
+    <ion-item>
+      <ion-toggle>Recuerdame</ion-toggle>
+    </ion-item>
+  </form>
+</ion-card>
+</ion-content>

@@ -15,11 +15,11 @@ export class ProductsService {
 
   ) { }
 
-  public getProductos() {
-    const requestheaders: string | null = this.auth.token;
-    return this.http.post<ProductoRespuesta>(this.URL, {
+  public getProductos(skip: number, limit: number){
+    console.log(this.auth.token)
+    return this.http.get<ProductoRespuesta>(`${this.URL}?skip=${skip}&limit=${limit}`, {
       headers: {
-        'Authorization': 'Bearer ' + requestheaders,
+        'Authorization': 'Bearer ' + this.auth.token,
         'Content-type': 'application/json'
       }
     });
