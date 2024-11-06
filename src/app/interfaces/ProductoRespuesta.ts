@@ -1,5 +1,4 @@
-import { Producto } from './Producto';
-
+import { Producto } from "./Producto";
 export interface ProductoRespuesta {
     products: Producto[];
     total: number;

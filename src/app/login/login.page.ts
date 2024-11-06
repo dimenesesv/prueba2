@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit{
   form! : FormGroup;
-
+  private token:string|null = null;
   constructor(
     public auth: AuthService,
     public formBuilder: FormBuilder,
@@ -21,15 +21,7 @@ export class LoginPage implements OnInit{
 
   onSubmit(){
     const user : IUser = this.form.value
-    this.auth.login(user).subscribe(
-        (response) => {
-          alert(response.accessToken)
-        },
-        (error) => {
-          alert(error)
-
-        } 
-      )
+    this.auth.login(user)
     }
 
   ngOnInit(): void {

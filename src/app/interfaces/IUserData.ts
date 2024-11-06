@@ -5,5 +5,5 @@ export interface IUserData {
     firstName:string
     lastName:string
     gender: "male" | "female"
-    acessToken: string 
+    accessToken: string 
 }
